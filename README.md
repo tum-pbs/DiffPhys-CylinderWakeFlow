@@ -38,6 +38,27 @@ Installation begins with a simple command for Phiflow
 ```
 !pip install phiflow==2.1.3
 ```
+## Training Script
+
+The python script `trainDPNN.py` under the directory `Training_script` executes the network training. The script takes the following as input arguments:
+
+- `python script name`: This indicates the name of the python script file that is to be executed.
+- `epochs`: The number of training epochs.
+- `output directory`: Name of the output directory where the output files are to be stored.
+- `configs`: The number of experiments to be included in the training
+- `total_frames` The number of consecutive frames per experiment to be included in training
+- `remove_frames`: Number of frames that are to be removed. Used to remove the transient frames not included in training.
+- `lr`: initial learning rate for training
+- `downsample`: How many times the high-resolution inputs velocity fields are to be downsampled
+- `msteps`: number of unroll steps during training
+- `adplr`: option to use adaptive learning rate or fixed learning rate
+- `rseed`: Value of the random number seed
+- `jitc`: option to use jit compilation or not
+- `gpu`: Value of the GPU for training
+
+
+
+
 
 
 
