@@ -56,9 +56,32 @@ The python script `trainDPNN.py` under the directory `Training_script` executes 
 - `jitc`: option to use jit compilation or not
 - `gpu`: Value of the GPU for training
 
+For further details, refer to the respective readme.md file. 
 
+## Simulation parameters
 
+The Cartesian employed in FoamExtend to generate the ground truth data can be easily loaded in Phiflow [Φ<sub>Flow</sub>] using the `phi.domain` class. In Phiflow, we employ an equivalent Staggared grid to store the velocity components in the grid faces. The following parameters are relevant for the simulations:
 
+ - `kinematic viscosity, ν`: 0.01 Ns/m<sup>2</sup>
+ - `characteristic length scale, *H*`: helght of the upstream cylinder
+ - `grid spacing, Δ𝑥/𝐷 = Δy/𝐷 `: 1/32 (high-resolution)
+ - `time step size, Δ*t*`: 0.1s
+ - `simulaiton time, *T*`: 300s
+ - `stastically stable simulaiton time, *T*`: 150s - 300s 
+ - `spacing ratio, *L/D*`: 1.2 ≤ *L/D* ≤ 5.5
 
+## Simulation setup
+
+In phiflow, the following settings are employed to transpost the velocity fields:
+
+- `advection:` MacCormack advection step for advecting the initial velocity
+- `projection:` Chiron's method to obtain divergence free velocity fields
+- `body wall boundary conditions`: no-slip mask.
+- `immersed body`: `phi.Obstacle` class
+- `freestream velocity`: constant Dirichlet velocity V = 1m/s
+  
+
+Typical example of the above are as follows;
+`V<sup>n+1</sup> = phi.flow.diffuse.explicit(velocity, ν, Δ*t*)`
 
 
