@@ -1,4 +1,4 @@
-# DiffPhys-CylinderWakeFlow
+# Differentiable Physics-Cylinder Wake Flows
 
 This is the repository containing the source codes for **Unsteady Cylinder Wakes from Arbitrary Bodies with Differentiable Physics-Assisted Neural Network** by [`Shuvayan Brahmachary`](https://shuvayanb.github.io/about/) and [`Nils Thuerey`](https://ge.in.tum.de/about/n-thuerey/). The preprint is available on [`arXiv`](https://arxiv.org/abs/2308.04296). 
 
@@ -87,7 +87,7 @@ Typical example of the above are as follows:</br>
 
 ## Pretrained model
 
-The pretrained DPNN-based model can be tested against a representative testing sample. The jupyter notebook corresponding to this setup cna be easily executed using this link:<a target="_blank" href="https://colab.research.google.com/github/tum-pbs/DiffPhys-CylinderWakeFlow/blob/main/Notebooks/DPNN_PretrainedModelEvaluations.ipynb">
+The pretrained DPNN-based model can be tested against a representative testing sample. The jupyter notebook corresponding to this setup can be easily executed using this link:<a target="_blank" href="https://colab.research.google.com/github/tum-pbs/DiffPhys-CylinderWakeFlow/blob/main/Notebooks/DPNN_PretrainedModelEvaluations.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> 
 
