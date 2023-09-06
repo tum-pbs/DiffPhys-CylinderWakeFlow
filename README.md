@@ -14,25 +14,25 @@ This work delineates a hybrid predictive framework configured as a coarse-graine
 Differentiable physics, unsteady cylinder wakes, arbitrary flows, spatio-temporal predictions
 
 ## Dataset
-The entire dataset used for training and testing the DPNN based-model is available for download [`Link here`](). Refer to respective readme.md files for instructions. The following image shows the 100 experiments that were generated at various spacing ratios using FoamExtend [`FoamExtend`](https://openfoamwiki.net/index.php/Installation/Linux/foam-extend-4.1). 
+The entire dataset used for training and testing the DPNN based-model is available for download [`not yet available`](). Refer to respective readme.md files for instructions. The following image shows the 100 experiments that were generated at various spacing ratios using FoamExtend [`FoamExtend`](https://openfoamwiki.net/index.php/Installation/Linux/foam-extend-4.1). 
 
 ![Image](Resources/GTData_MeanVel.png)
 
 ## FoamExtend
-The open source immersed boundary-based solver `FoamExtend v4.0` was used to generate the high-resolution (768 x 512) flowfields for flow past arbitrarily shaped objects on a Cartesian mesh. Refer to [`this link`](https://openfoamwiki.net/index.php/Installation/Linux/foam-extend-4.0) for instalaltion instructions. Recommended open source postprocessing tool [`Paraview`](https://www.paraview.org/). Recommended open source tool for meshing [`Gmsh`](https://gmsh.info/). Validation test cases performed using FoamExtend as well as related source codes and computational meshes will be uploaded [`this link`]().
+The open source immersed boundary-based solver `FoamExtend v4.0` was used to generate the high-resolution (768 x 512) flowfields for flow past arbitrarily shaped objects on a Cartesian mesh. Refer to [`this link`](https://openfoamwiki.net/index.php/Installation/Linux/foam-extend-4.0) for installation instructions. Recommended open source postprocessing tool [`Paraview`](https://www.paraview.org/). Recommended open source tool for meshing [`Gmsh`](https://gmsh.info/). Validation test cases performed using FoamExtend as well as related source codes and computational meshes will be uploaded [`not yet available`]().
 
 ## Differentiable solver Phiflow
-In house developed differentiable flow solver Phiflow [Φ<sub>Flow</sub>] is used as the base *source* solver. The machine learning frameworks [TensorFlow](https://www.tensorflow.org/) is utilised as the python backend. 
+In house developed differentiable flow solver Phiflow [Φ<sub>Flow</sub>] is used as the base *source* solver. The machine learning framework [TensorFlow](https://www.tensorflow.org/) is utilised as the python backend. 
 
 ## Installation
 The following packages/libraries with version have been used:
 
 
-PhiFlow 2.1.3
-Tensorflow 2.3.0
-Numpy 1.20.3
-Scipy 1.9.3
-CUDA 10.0
+PhiFlow 2.1.3</br>
+Tensorflow 2.3.0</br>
+Numpy 1.20.3</br>
+Scipy 1.9.3</br>
+CUDA 10.0</br>
 
 Installation begins with a simple command for Phiflow
 ```
@@ -60,15 +60,15 @@ For further details, refer to the respective readme.md file.
 
 ## Simulation parameters
 
-The Cartesian employed in FoamExtend to generate the ground truth data can be easily loaded in Phiflow [Φ<sub>Flow</sub>] using the `phi.domain` class. In Phiflow, we employ an equivalent Staggared grid to store the velocity components in the grid faces. The following parameters are relevant for the simulations:
+The Cartesian employed in FoamExtend to generate the ground truth data can be easily loaded in Phiflow [Φ</sub>Flow</sub>] using the `phi.domain` class. In Phiflow, we employ an equivalent Staggared grid to store the velocity components in the grid faces. The following parameters are relevant for the simulations:
 
  - `kinematic viscosity, ν`: 0.01 Ns/m<sup>2</sup>
- - `characteristic length scale, *H*`: helght of the upstream cylinder
+ - `characteristic length scale, H`: helght of the upstream cylinder
  - `grid spacing, Δ𝑥/𝐷 = Δy/𝐷 `: 1/32 (high-resolution)
- - `time step size, Δ*t*`: 0.1s
- - `simulaiton time, *T*`: 300s
- - `stastically stable simulaiton time, *T*`: 150s - 300s 
- - `spacing ratio, *L/D*`: 1.2 ≤ *L/D* ≤ 5.5
+ - `time step size, Δt`: 0.1s
+ - `simulaiton time, T`: 300s
+ - `stastically stable simulaiton time, T`: 150s - 300s 
+ - `spacing ratio, L/D`: 1.2 ≤ L/D ≤ 5.5
 
 ## Simulation setup
 
@@ -81,7 +81,14 @@ In phiflow, the following settings are employed to transpost the velocity fields
 - `freestream velocity`: constant Dirichlet velocity V = 1m/s
   
 
-Typical example of the above are as follows;
-`V<sup>n+1</sup> = phi.flow.diffuse.explicit(velocity, ν, Δ*t*)`
+Typical example of the above are as follows:</br>
+`V* = advect.mac_cormack(V0, ν, Δt)` </br>
+`V1, p1 = fluid.make_incompressible(V* obstacle, Solve('CG', 1e-5, 1e-5, 2500, x0=None))`</br>
+
+## Pretrained model
+
+The pretrained DPNN-based model can be tested against a representative testing sample. The jupyter notebook corresponding to this setup cna be easily executed using this link:<a target="_blank" href="https://colab.research.google.com/github/tum-pbs/DiffPhys-CylinderWakeFlow/blob/main/Notebooks/DPNN_PretrainedModelEvaluations.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a> 
 
 
