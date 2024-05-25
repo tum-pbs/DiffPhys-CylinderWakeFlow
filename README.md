@@ -114,3 +114,10 @@ DenseNet: <img src="Resources/NN6.png" width="600" alt="ConvNet">
 <div>
 FCN: <img src="Resources/NN7.png" width="600" alt="ConvNet">
 </div>
+
+<br>
+Please cite the following:<br>
+Brahmachary, S., & Thuerey, N. (2024). <br>
+Unsteady cylinder wakes from arbitrary bodies with differentiable physics-assisted neural network. <br>
+Physical Review E, 109(5), 055304.<br>
+https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.055304<br>
