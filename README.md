@@ -1,6 +1,6 @@
 # Differentiable Physics-Cylinder Wake Flows
 
-This is the repository containing the source codes for **Unsteady Cylinder Wakes from Arbitrary Bodies with Differentiable Physics-Assisted Neural Network** by [`Shuvayan Brahmachary`](https://shuvayanb.github.io/about/) and [`Nils Thuerey`](https://ge.in.tum.de/about/n-thuerey/). The preprint is available on [`arXiv`](https://arxiv.org/abs/2308.04296). 
+This is the repository containing the source codes for **Unsteady Cylinder Wakes from Arbitrary Bodies with Differentiable Physics-Assisted Neural Network** by [`Shuvayan Brahmachary`](https://shuvayanb.github.io/about/) and [`Nils Thuerey`](https://ge.in.tum.de/about/n-thuerey/). The work has been accepted as a regular article in Physical Review E [`PRE`](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.055304). The preprint is available on [`arXiv`](https://arxiv.org/abs/2308.04296). 
 
 Additional information: [`project page`](https://ge.in.tum.de/publications/unsteady-cylinder-wakes-from-arbitrary-bodies-with-differentiable-physics-assisted-neural-network/)
 
