@@ -113,4 +113,4 @@ DenseNet: <img src="Resources/NN6.png" width="600" alt="ConvNet">
 </div>
 <div>
 FCN: <img src="Resources/NN7.png" width="600" alt="ConvNet">
-</div>div>
+</div>
