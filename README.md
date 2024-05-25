@@ -91,4 +91,26 @@ The pretrained DPNN-based model can be tested against a representative testing s
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> 
 
+## Some of the NN architectures 
 
+<div>
+ConvNet: <img src="Resources/NN1.png" width="600" alt="ConvNet">
+</div>
+<div>
+Dil-ResNet: <img src="Resources/NN2.png" width="600" alt="ConvNet">
+</div>
+<div>
+ResNet: <img src="Resources/NN3.png" width="600" alt="ConvNet">
+</div>
+<div>
+Unet: <img src="Resources/NN4.png" width="600" alt="ConvNet">
+</div>
+<div>
+ResNeXt: <img src="Resources/NN5.png" width="600" alt="ConvNet">
+</div>
+<div>
+DenseNet: <img src="Resources/NN6.png" width="600" alt="ConvNet">
+</div>
+<div>
+FCN: <img src="Resources/NN7.png" width="600" alt="ConvNet">
+</div>div>
